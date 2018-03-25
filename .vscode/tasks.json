@@ -1,0 +1,17 @@
+{
+  // https://code.visualstudio.com/docs/editor/tasks
+  "version": "0.1.0"
+  , "_runner": "terminal"
+  , "tasks": [
+    {
+      "taskName": "Compile",
+      "command": "python",
+      "isShellCommand": true,
+      "isBuildCommand": true,
+      "showOutput": "always",
+      "args": ["${relativeFile}"],
+      "presentation": {"panel": "new"},
+
+    }
+  ] 
+}
