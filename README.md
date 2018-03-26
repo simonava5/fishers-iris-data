@@ -19,6 +19,7 @@ Given that it was one of the first widely available and high profile ‘real dat
 <p align="center">
   <img alt="Sir Ronald Aylmer Fisher" src="http://www.swlearning.com/quant/kohler/stat/biographical_sketches/Fisher_3.jpeg">
 </p>
+
 **Figure 2.** Sir Ronald Aylmer Fisher, British statistician and biologist (1890-1962).
 
 ## Strategy to Investigation
