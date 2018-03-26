@@ -16,7 +16,9 @@ Two of the species, *I. setosa* and *I. versicolor* were collected on the collec
 ### Why it’s still in use today
 Given that it was one of the first widely available and high profile ‘real data’ sets, it’s use proliferated as a pedagogical resource for teaching statistical methodologies [2].  The data were originally used by Fisher as an example for multivariate discriminate analyses [7].  Subsequently, the Irish data set has become one of the mode widely used reference data set for classification and prediction studies, and more recently for machine learning approaches to clustering, classification and pattern recognition [8]. 
 
-<div style="text-align:center"><img src ="http://www.swlearning.com/quant/kohler/stat/biographical_sketches/Fisher_3.jpeg" /></div>
+<p align="center">
+  <img alt="Sir Ronald Aylmer Fisher" src="http://www.swlearning.com/quant/kohler/stat/biographical_sketches/Fisher_3.jpeg">
+</p>
 **Figure 2.** Sir Ronald Aylmer Fisher, British statistician and biologist (1890-1962).
 
 ## Strategy to Investigation
