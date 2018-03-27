@@ -2,7 +2,7 @@
 
 ## Background information on the data
 ### What is the data
-The Iris flower data set is considered a classic data set for use in statistics [1, 2].  The data set contains 150 objects of three different classes and four features: three species of North American *Iris* flower (*Iris setosa*, *I. virginica* and *I. versicolor*) with 50 numeric values per species of sepal length and width, and petal length and width, in cm.  It is available for download since 1988 from UC [Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) [3].
+The Iris flower data set is considered a classic data set for use in statistics [1, 2].  The data set contains 150 objects of three different classes and four features: three species of North American *Iris* flower (*Iris setosa*, *I. virginica* and *I. versicolor*) with 50 numeric values per species of sepal length and width, and petal length and width, in cm.  It is available for download since 1988 from [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) [3].
 
 ### Who collated it and why
 The data were collated by Edgar Anderson for his publication in 1935 to as the species were seen as an ideal study system within which test hypotheses about intra- and interspecific morphological variation, and consequent inference of the evolutionary relationships between them [4, 5]. As *I. versicolor* is geographically and morphologically intermediate between *I. virginica* and *I. setosa*, Anderson aimed to test whether *I. versicolor* originated as a result of a recent hybridisation event between *I. virginica* and *I. setosa*, or whether it was a progenitor of either species [5].  
