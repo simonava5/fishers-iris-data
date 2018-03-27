@@ -18,7 +18,7 @@ The data were collated by Edgar Anderson for his publication in 1935 to as the s
 Two of the species, *I. setosa* and *I. versicolor* were collected on the Gaspé Peninsula, Quebec, Canada "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus", and published by Edgar in 1935 [1,5].  It is presumed that the same apparatus and rigor were applied to the measurement of *I. virginica* before Edgar shared the data with the British statistician and biologist Sir Ronald Aylmer Fisher in 1936 [7].  
 
 ### Why it’s still in use today
-Given that it was one of the first widely available and high profile ‘real data’ sets, it’s use proliferated as a pedagogical resource for teaching statistical methodologies [2].  The data were originally used by Fisher as an example for multivariate discriminate analyses [7].  Subsequently, the Irish data set has become one of the mode widely used reference data set for classification and prediction studies, and more recently for machine learning approaches to clustering, classification and pattern recognition [8]. 
+Given that it was one of the first widely available and high profile ‘real data’ sets, it’s use proliferated as a pedagogical resource for teaching statistical methodologies [2].  The data were originally used by Fisher as an example for multivariate discriminate analyses [7].  Subsequently, the Irish data set has become one of the most widely used reference data set for classification and prediction studies, and more recently for machine learning approaches to clustering, classification and pattern recognition [8]. 
 
 <p align="center">
   <img alt="Sir Ronald Aylmer Fisher" src="http://www.swlearning.com/quant/kohler/stat/biographical_sketches/Fisher_3.jpeg">
@@ -31,18 +31,18 @@ Given that it was one of the first widely available and high profile ‘real dat
 
 ## References
 
-* [1]	Wikipedia entry: Iris flower data set.
+1.	Wikipedia entry: Iris flower data set.
 	https://en.wikipedia.org/wiki/Iris_flower_data_set
-* [2]	Singer, J. D., & Willett, J. B. (1990). Improving the teaching of applied statistics: Putting the data back into data analysis. The American Statistician, 44(3), 223-230.
-* [3]	UC Irvine Machine Learning Repository: Iris data set.
+2.	Singer, J. D., & Willett, J. B. (1990). Improving the teaching of applied statistics: Putting the data back into data analysis. The American Statistician, 44(3), 223-230.
+3.	UC Irvine Machine Learning Repository: Iris data set.
 	https://archive.ics.uci.edu/ml/datasets/iris
-* [4]	Anderson, E. (1935). The irises of the Gaspe Peninsula. Bulletin of the American Iris society, 59, 2-5.
-* [5]	Anderson, E. (1936). The species problem in Iris. Annals of the Missouri Botanical Garden, 23(3), 457-509.
-* [6]	Datacamp: Machine Learning in R
+4.	Anderson, E. (1935). The irises of the Gaspe Peninsula. Bulletin of the American Iris society, 59, 2-5.
+5.	Anderson, E. (1936). The species problem in Iris. Annals of the Missouri Botanical Garden, 23(3), 457-509.
+6.	Datacamp: Machine Learning in R
 	https://www.datacamp.com/community/tutorials/machine-learning-in-r
-* [7]	Fisher, R. A. (1936). The use of multiple measurements in taxonomic problems. Annals of human genetics, 7(2), 179-188.
-* [8]	Runkler, T. A. (2012). Chapter 2: Data and Relations. Models and Algorithms for Intelligent Data Analysis. Vieweg and Teubner Verlag.
-* [9]	Wikipedia entry: Ronald Fisher
+7.	Fisher, R. A. (1936). The use of multiple measurements in taxonomic problems. Annals of human genetics, 7(2), 179-188.
+8.	Runkler, T. A. (2012). Chapter 2: Data and Relations. Models and Algorithms for Intelligent Data Analysis. Vieweg and Teubner Verlag.
+9.	Wikipedia entry: Ronald Fisher
 	https://en.wikipedia.org/wiki/Ronald_Fisher
 
 
