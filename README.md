@@ -15,7 +15,7 @@ The data were collated by Edgar Anderson for his publication in 1935 to as the s
 </p>
 
 ### How data were collected
-Two of the species, *I. setosa* and *I. versicolor* were collected on the collected in the Gaspé Peninsula, Quebec, Canada "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus", and published by Edgar in 1935 [1,5].  It is presumed that the same apparatus and rigor were applied to the measurement of *I. virginica* before Edgar shared the data with the British statistician and biologist Sir Ronald Aylmer Fisher in 1936 [7].  
+Two of the species, *I. setosa* and *I. versicolor* were collected on the Gaspé Peninsula, Quebec, Canada "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus", and published by Edgar in 1935 [1,5].  It is presumed that the same apparatus and rigor were applied to the measurement of *I. virginica* before Edgar shared the data with the British statistician and biologist Sir Ronald Aylmer Fisher in 1936 [7].  
 
 ### Why it’s still in use today
 Given that it was one of the first widely available and high profile ‘real data’ sets, it’s use proliferated as a pedagogical resource for teaching statistical methodologies [2].  The data were originally used by Fisher as an example for multivariate discriminate analyses [7].  Subsequently, the Irish data set has become one of the mode widely used reference data set for classification and prediction studies, and more recently for machine learning approaches to clustering, classification and pattern recognition [8]. 
