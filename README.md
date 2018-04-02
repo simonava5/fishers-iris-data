@@ -28,14 +28,14 @@ Given that it was one of the first widely available and high profile ‘real dat
 </p>
 
 ## Strategy to Investigation
-1. Data acquistion and formatting
-2. Data exploration
-	2a. Descriptive statistics
-	2b. Tables and graphs 
-3. Analyses
-	3a. Compare classes
-	3b. Correlation across variables
-	3c. Classification of classes
+1. 1. Data acquistion and formatting
+1. 2. Data exploration
+	1. 2a. Descriptive statistics
+	1. 2b. Tables and graphs 
+1. 3. Analyses
+	1. 3a. Compare classes
+	1. 3b. Correlation across variables
+	1. 3c. Classification of classes
 
 ## References
 
