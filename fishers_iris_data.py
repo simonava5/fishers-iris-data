@@ -69,7 +69,7 @@ setosa = data[data['species'] == 'Iris-setosa']
 versicolor = data[data['species'] == 'Iris-versicolor']
 virginica = data[data['species'] == 'Iris-virginica']
 
-# Fig.1 Histogram of sepal length across species. 
+# Fig.1 Histogram of sepal length across species. From: https://stackoverflow.com/questions/21548750/plotting-histograms-against-classes-in-pandas-matplotlib/21549391  
 data.sepalLength.hist(alpha=0.1, label='all species') # alpha = transparency
 setosa.sepalLength.hist(alpha=0.6, label='setosa')
 versicolor.sepalLength.hist(alpha=0.6, label='versicolor')
@@ -80,7 +80,7 @@ plt.title('Sepal length across species')
 plt.legend()
 plt.savefig('figures/fig1.jpg')
 
-# Use seaborn visualisation library to produce a pairplot. It will produce a stacked histograms of each numerical feature and scatterplots of features, coloured according Iris species.  Scatterplots will identify any potential correlations between features and if these relationships are species-specific.
+# Use seaborn visualisation library to produce a pairplot. It will produce a stacked histograms of each numerical feature and scatterplots of features, coloured according to Iris species.  Scatterplots will identify any potential correlations between features and if these relationships are species-specific.
 
 import seaborn as sns
 
