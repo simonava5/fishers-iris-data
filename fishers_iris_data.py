@@ -11,7 +11,7 @@ with open("data/iris.csv") as f:
     x = line.split(',')     
     print(('{} {} {} {} {}').format(x[0], x[1], x[2], x[3], x[4]))
 
-# For futher data exploration and manipulation import the pandas library https://pandas.pydata.org/. It is dependent on other libraries too like NumPy http://www.numpy.org/ for additional mathematical functions beyond the Python standard library and matplotlib.pyplot https://matplotlib.org/api/pyplot_api.html to provide a MATLAB-like plotting framework.
+# For futher data exploration and manipulation import the pandas library https://pandas.pydata.org/. It is dependent on other libraries such as NumPy http://www.numpy.org/ for additional mathematical functions beyond the Python standard library and matplotlib.pyplot https://matplotlib.org/api/pyplot_api.html to provide a MATLAB-like plotting framework.
 
 import pandas as pd
 import numpy as np
