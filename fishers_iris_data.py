@@ -51,7 +51,9 @@ table2 = byspecies.describe()
 print(table2)
 table2.to_csv('tables/table2.csv')
 
-# Originally tried the below but a bug in histogram generation means that you can't use groupby to automatically assign the legend.
+# Create histograms of features grouped by species. Histograms illustrate the distribution of each feature attributes per species. This aids the identification of the differences, or lack thereof, between species per feature. When exploring differences between classes, I think unstacked histograms per class plotted with the entire distribution in the background more ameniable to interpretation than stacked histograms.
+
+# Originally I tried the below but a bug in histogram generation with matplotlib means that you can't use groupby to automatically assign the labels in the legend.
 # Plot histograms of each variable and colour by species
 # data.groupby("species").sepalLength.hist(alpha=0.5)
 # plt.xlabel('Width (cm)')
@@ -61,26 +63,27 @@ table2.to_csv('tables/table2.csv')
 # plt.show()
 # plt.savefig('figures/fig1.jpg')
 
-# Only straightforward solution is to split data into groups by species for plotting on histograms 
+# Only straightforward solution is to split data by species for plotting on histograms 
 
 setosa = data[data['species'] == 'Iris-setosa']
 versicolor = data[data['species'] == 'Iris-versicolor']
 virginica = data[data['species'] == 'Iris-virginica']
 
-# Histogram of sepal length across species
-
-setosa.sepalLength.hist(alpha=0.5, label='setosa')
-versicolor.sepalLength.hist(alpha=0.5, label='versicolor')
-virginica.sepalLength.hist(alpha=0.5, label='virginica')
+# Fig.1 Histogram of sepal length across species. 
+data.sepalLength.hist(alpha=0.1, label='all species') # alpha = transparency
+setosa.sepalLength.hist(alpha=0.6, label='setosa')
+versicolor.sepalLength.hist(alpha=0.6, label='versicolor')
+virginica.sepalLength.hist(alpha=0.6, label='virginica')
 plt.xlabel('Length (cm)')
 plt.ylabel('Frequency')
 plt.title('Sepal length across species')
 plt.legend()
 plt.savefig('figures/fig1.jpg')
 
-# use seaborn
+# Use seaborn visualisation library to produce a pairplot. It will produce a stacked histograms of each numerical feature and scatterplots of features, coloured according Iris species.  Scatterplots will identify any potential correlations between features and if these relationships are species-specific.
 
 import seaborn as sns
 
-sns.pairplot(data, hue='species', size=2)
-plt.show()
+fig5 = sns.pairplot(data, hue='species', size=2)
+fig5.fig.subplots_adjust(right = 0.8) # There was a bug in seaborn as the legend is rendered over the pairplot, not outside to the centre right. The below solution was posted here: https://stackoverflow.com/questions/37815774/seaborn-pairplot-legend-how-to-control-position
+plt.savefig('figures/fig5.jpg')
