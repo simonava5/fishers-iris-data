@@ -133,3 +133,27 @@ import seaborn as sns
 fig5 = sns.pairplot(data, hue='species', size=2) # hue identifies the class to colourise; size is height (in inches!) of each facet
 fig5.fig.subplots_adjust(right = 0.8) # There was a bug in seaborn as the legend is rendered over the pairplot, not outside to the centre right. The solution used on this line to adjust the right margin was posted here: https://stackoverflow.com/questions/37815774/seaborn-pairplot-legend-how-to-control-position
 plt.savefig('figures/fig5.jpg')
+
+# To test statistically differences between the species across the measured features, I wanted to repeat the ANOVA analyses in Fisher's original paper but from the figures it was clear that other than Fig. 2, the data was largely non-normal and heteroscedastic so I chose non-parametric tests. I could test for normality too (e.g. Shapiro-Wilk), but with a sample size of 50 across groups there may not be sufficient power to reject normality making the test meaningless.
+
+# Import scipy for Kruskal Wallis test functionality: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kruskal.html Test the null hypothesis that the distribution of the ranks of the numerical features do not differ across species.
+
+import scipy.stats as sc
+
+# ensure species is being recogised as a categorical as it was originally called 'object' above: https://pandas.pydata.org/pandas-docs/stable/categorical.html 
+data['species'] = data['species'].astype('category')
+print(data.dtypes)
+
+# Kruskal Wallis test requires an arrary from the dataframe: https://stackoverflow.com/questions/35276217/use-groups-in-scipy-stats-kruskal-similar-to-r-cran-kruskal-test
+
+def KW(x):
+    data.species = np.array(data.species) # convert `data.species` to a numpy array for indexing
+    label, idsp = np.unique(x, return_inverse=True) # find unique group labels and their corresponding indices
+    groups = [data.species[idsp == i] for i, l in enumerate(label)] # make a list of arrays containing the data.species values corresponding to each unique label
+    H, p = sc.kruskal(*groups) # use `*` to unpack the list as a sequence of arguments
+    print(H, p)
+
+KW(data.sepalLength)
+KW(data.sepalWidth)
+KW(data.petalLength)
+KW(data.petalWidth)
