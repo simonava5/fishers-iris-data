@@ -83,6 +83,7 @@ plt.ylabel('Frequency')
 plt.title('Sepal length across species')
 plt.legend()
 plt.savefig('figures/fig1.jpg')
+plt.close() # to clear all features to produce the next figure (I found out the hard way!): https://matplotlib.org/api/_as_gen/matplotlib.pyplot.close.html
 
 # Fig.2 Histogram of sepal width across species.
 
@@ -95,6 +96,7 @@ plt.ylabel('Frequency')
 plt.title('Sepal width across species')
 plt.legend()
 plt.savefig('figures/fig2.jpg')
+plt.close()
 
 # Fig.3 Histogram of petal length across species.
 
@@ -107,6 +109,7 @@ plt.ylabel('Frequency')
 plt.title('Petal length across species')
 plt.legend()
 plt.savefig('figures/fig3.jpg')
+plt.close()
 
 # Fig.4 Histogram of petal width across species.
 
@@ -119,6 +122,7 @@ plt.ylabel('Frequency')
 plt.title('Petal width across species')
 plt.legend()
 plt.savefig('figures/fig4.jpg')
+plt.close()
 
 # Import the seaborn visualisation library to produce a pairplot. The pairplot will produce stacked histograms (which I dislike) and scatterplots of numerical features, coloured according to Iris species: https://seaborn.pydata.org/generated/seaborn.pairplot.html
 
