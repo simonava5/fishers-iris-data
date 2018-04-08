@@ -157,3 +157,11 @@ KW(data.sepalLength)
 KW(data.sepalWidth)
 KW(data.petalLength)
 KW(data.petalWidth)
+
+# check for correlations across features, independent of species. Use the .corr feature in Pandas. A non-parametric equivalent, Spearman's rho, will be used to correlate ranks across features: https://stackoverflow.com/questions/42885239/correlation-matrix-of-two-pandas-dataframe-with-p-values?rq=1
+
+# table3 = data.drop(['species'], axis = 1).corr(method='spearman')
+# print(table3)
+# table3.to_csv('tables/table3.csv')
+
+
