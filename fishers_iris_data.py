@@ -158,10 +158,18 @@ KW(data.sepalWidth)
 KW(data.petalLength)
 KW(data.petalWidth)
 
-# check for correlations across features, independent of species. Use the .corr feature in Pandas. A non-parametric equivalent, Spearman's rho, will be used to correlate ranks across features: https://stackoverflow.com/questions/42885239/correlation-matrix-of-two-pandas-dataframe-with-p-values?rq=1
+# Pandas can calculate the Spearman's rho, but does not calculate the p-value (only for Pearons's r).  Import scipy library for spearmanr function: https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.spearmanr.html
 
-# table3 = data.drop(['species'], axis = 1).corr(method='spearman')
-# print(table3)
-# table3.to_csv('tables/table3.csv')
+# Remove species column to feed an array to scipy
 
+data.nospecies = data.drop(['species'], axis = 1)
+print(data.nospecies.head())
 
+# Calculate pairwise Spearman's rho and p-value: https://stackoverflow.com/questions/33997753/calculating-pairwise-correlation-among-all-columns
+
+rho, pval = sc.spearmanr(data.nospecies,data.nospecies)
+
+# Save as tables
+
+np.savetxt('tables/table3.csv', rho, delimiter=',')
+np.savetxt('tables/table4.csv', pval, delimiter=',')
