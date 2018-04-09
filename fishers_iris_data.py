@@ -158,7 +158,7 @@ KW(data.sepalWidth)
 KW(data.petalLength)
 KW(data.petalWidth)
 
-# Pandas can calculate the Spearman's rho, but does not calculate the p-value (only for Pearons's r).  Import scipy library for spearmanr function: https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.spearmanr.html
+# Pandas can calculate the Spearman's rho, but does not calculate the p-value (only for Pearons's r).  Both rho and p-value are outputs from scipy library spearmanr function: https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.spearmanr.html
 
 def correl(y):
     y.nospecies = y.drop(['species'], axis = 1) # remove species column
