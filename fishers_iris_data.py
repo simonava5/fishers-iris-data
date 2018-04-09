@@ -160,16 +160,9 @@ KW(data.petalWidth)
 
 # Pandas can calculate the Spearman's rho, but does not calculate the p-value (only for Pearons's r).  Import scipy library for spearmanr function: https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.spearmanr.html
 
-# Remove species column to feed an array to scipy
-
-data.nospecies = data.drop(['species'], axis = 1)
-print(data.nospecies.head())
-
-# Calculate pairwise Spearman's rho and p-value: https://stackoverflow.com/questions/33997753/calculating-pairwise-correlation-among-all-columns
-
-rho, pval = sc.spearmanr(data.nospecies,data.nospecies)
-
-# Save as tables
-
-np.savetxt('tables/table3.csv', rho, delimiter=',')
-np.savetxt('tables/table4.csv', pval, delimiter=',')
+def correl(y):
+    y.nospecies = y.drop(['species'], axis = 1) # remove species column
+    rho, pval = sc.spearmanr(y.nospecies) # conduct pairwaise correlation
+    np.savetxt('tables/table_rho_y.csv', rho, delimiter=',') # save rho as a table
+    np.savetxt('tables/table_pval_y.csv', pval, delimiter=',') # save p-value as a table
+    
