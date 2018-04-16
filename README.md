@@ -43,8 +43,14 @@ Given that it was one of the first widely available and high profile ‘real dat
 
 ## Strategy to Investigation
 ### Objectives
+* Explore differences between species with regards to the features measured through desciptive statistics, graphs and statistical tests
+* Identify relationships between features both across and within species, and test for the strength and statisical significance of these relationships
+* Implement a classification approach, identify which features were the most informative and assess the accuracy of the approach
+
 ### Data acquistion and formatting
+
 ### Data exploration
+
 ### Analyses
 #### Comparison across classes
 #### Correlation
