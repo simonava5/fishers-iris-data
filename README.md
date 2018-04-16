@@ -1,6 +1,6 @@
 # Fisher's Iris Data: Project for GMIT Course 52167 Programming and Scripting
 
-### Table of contents
+## Table of contents
 * [Background information on the data](https://github.com/tomasmurray/fishers-iris-data#background-information-on-the-data)
 	* [What is the data](https://github.com/tomasmurray/fishers-iris-data#what-is-the-data)
 	* [Who collated it and why](https://github.com/tomasmurray/fishers-iris-data#who-collated-it-and-why)
