@@ -1,5 +1,19 @@
 # Fisher's Iris Data: Project for GMIT Course 52167 Programming and Scripting
 
+### Table of contents
+* [Background information on the data](https://github.com/tomasmurray/fishers-iris-data#background-information-on-the-data)
+	* [What is the data](https://github.com/tomasmurray/fishers-iris-data#what-is-the-data)
+	* [Who collated it and why](https://github.com/tomasmurray/fishers-iris-data#who-collated-it-and-why)
+	* [How data were collected](https://github.com/tomasmurray/fishers-iris-data#how-data-were-collected)
+	* [Why it’s still in use today](https://github.com/tomasmurray/fishers-iris-data#why-its-still-in-use-today)
+* [Strategy to investigation](https://github.com/tomasmurray/fishers-iris-data#strategy-to-investigation)
+	* Objectives
+	* Data acquistion and formatting
+	* Data exploration
+	* Analyses
+* Summary of results
+* References
+
 ## Background information on the data
 ### What is the data
 The Iris flower data set is considered a classic data set for use in statistics [1, 2].  The data set contains 150 objects of three different classes and four features: three species of North American *Iris* flower (*Iris setosa*, *I. virginica* and *I. versicolor*) with 50 numeric values per species of sepal length and width, and petal length and width, in cm.  It is available for download since 1988 from [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris) [3].
@@ -28,14 +42,15 @@ Given that it was one of the first widely available and high profile ‘real dat
 </p>
 
 ## Strategy to Investigation
-1. Data acquistion and formatting
-1. Data exploration
-	1. Descriptive statistics
-	1. Tables and graphs 
-1. Analyses
-	1. Compare classes
-	1. Correlation across variables
-	1. Classification of classes
+### Objectives
+### Data acquistion and formatting
+### Data exploration
+### Analyses
+#### Comparison across classes
+#### Correlation
+#### Classification
+
+## Summary of results
 
 ## References
 
