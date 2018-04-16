@@ -7,12 +7,12 @@
 	* [How data were collected](https://github.com/tomasmurray/fishers-iris-data#how-data-were-collected)
 	* [Why it’s still in use today](https://github.com/tomasmurray/fishers-iris-data#why-its-still-in-use-today)
 * [Strategy to investigation](https://github.com/tomasmurray/fishers-iris-data#strategy-to-investigation)
-	* Objectives
-	* Data acquistion and formatting
-	* Data exploration
-	* Analyses
-* Summary of results
-* References
+	* [Objectives](https://github.com/tomasmurray/fishers-iris-data#objectives)
+	* [Data acquistion and formatting](https://github.com/tomasmurray/fishers-iris-data#data-acquistion-and-formatting)
+	* [Data exploration](https://github.com/tomasmurray/fishers-iris-data#data-exploration)
+	* [Analyses](https://github.com/tomasmurray/fishers-iris-data#analyses)
+* [Summary of results](https://github.com/tomasmurray/fishers-iris-data#summary-of-results)
+* [References](https://github.com/tomasmurray/fishers-iris-data#references)
 
 ## Background information on the data
 ### What is the data
