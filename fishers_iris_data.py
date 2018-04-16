@@ -70,7 +70,7 @@ setosa = data[data['species'] == 'Iris-setosa']
 versicolor = data[data['species'] == 'Iris-versicolor']
 virginica = data[data['species'] == 'Iris-virginica']
 
-# I know this violates the 'Don't Repeat Yourself' principle, but with differing axes and titles I didn't think it a good use of time to write a function for just four graphs. 
+# I know this violates the 'Don't Repeat Yourself' principle, but with just four graphs to generate I didn't have time to write a function. 
 
 # Fig.1 Histogram of sepal length across species. Based on: https://stackoverflow.com/questions/21548750/plotting-histograms-against-classes-in-pandas-matplotlib/21549391  
 
@@ -134,7 +134,7 @@ fig5 = sns.pairplot(data, hue='species', size=2) # hue identifies the class to c
 fig5.fig.subplots_adjust(right = 0.8) # There was a bug in seaborn as the legend is rendered over the pairplot, not outside to the centre right. The solution used on this line to adjust the right margin was posted here: https://stackoverflow.com/questions/37815774/seaborn-pairplot-legend-how-to-control-position
 plt.savefig('figures/fig5.jpg')
 
-# To test statistically differences between the species across the measured features, I wanted to repeat the ANOVA analyses in Fisher's original paper but from the figures it was clear that other than Fig. 2, the data was largely non-normal and heteroscedastic so I chose non-parametric tests. I could test for normality too (e.g. Shapiro-Wilk), but with a sample size of 50 across groups there may not be sufficient power to reject normality making the test meaningless.
+# To test statistical differences between the species across the measured features, I wanted to repeat the ANOVA analyses in Fisher's original paper but from the figures it was clear that other than Fig. 2, the data was largely non-normal and heteroscedastic so I chose non-parametric tests. I could test for normality too (e.g. Shapiro-Wilk), but with a sample size of 50 across groups there may not be sufficient power to reject normality making the test meaningless.
 
 # Import scipy for Kruskal Wallis test functionality: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kruskal.html Test the null hypothesis that the distribution of the ranks of the numerical features do not differ across species.
 
@@ -160,7 +160,7 @@ KW(data.petalWidth)
 
 # Pandas can calculate the Spearman's rho, but does not calculate the p-value (only for Pearons's r). Both rho and p-value can be outputted by the scipy library spearmanr function: https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.spearmanr.html
 
-# Across species corrlations. Need to drop species column to change the dataframe with columns of strings to an array to the spearman function in scipy: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.drop.html
+# Across species correlations. Need to drop species column to change the dataframe with columns of strings to an array to the spearman function in scipy: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.drop.html
 
 data.nospecies = data.drop(['species'], axis = 1) # remove species column
 rho, pval = sc.spearmanr(data.nospecies) # conduct pairwaise correlation
