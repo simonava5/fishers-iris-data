@@ -158,11 +158,24 @@ KW(data.sepalWidth)
 KW(data.petalLength)
 KW(data.petalWidth)
 
-# Pandas can calculate the Spearman's rho, but does not calculate the p-value (only for Pearons's r).  Both rho and p-value are outputs from scipy library spearmanr function: https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.spearmanr.html
+# Pandas can calculate the Spearman's rho, but does not calculate the p-value (only for Pearons's r). Both rho and p-value can be outputted by the scipy library spearmanr function: https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.spearmanr.html
+
+# Across species corrlations. Need to drop species column to change the dataframe with columns of strings to an array to the spearman function in scipy: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.drop.html
+
+data.nospecies = data.drop(['species'], axis = 1) # remove species column
+rho, pval = sc.spearmanr(data.nospecies) # conduct pairwaise correlation
+np.savetxt('tables/table3.csv', rho, delimiter=',') # save rho as a table
+np.savetxt('tables/table4.csv', pval, delimiter=',') # save p-value as a table
+
+# Per species correlations.
 
 def correl(y):
-    y.nospecies = y.drop(['species'], axis = 1) # remove species column
-    rho, pval = sc.spearmanr(y.nospecies) # conduct pairwaise correlation
-    np.savetxt('tables/table_rho_y.csv', rho, delimiter=',') # save rho as a table
-    np.savetxt('tables/table_pval_y.csv', pval, delimiter=',') # save p-value as a table
-    
+    n = str(y['species'].iloc[0]) # get the species name as a string for the output file using pandas syntax for value under the species column at row index 0
+	y.nospecies = y.drop(['species'], axis = 1)
+    rho, pval = sc.spearmanr(y.nospecies)
+    np.savetxt('tables/table_Srho_' + n[5:] + '.csv', rho, delimiter=',') # use + n[5:] + to concatenate output file name with species name and remove 'Iris-'
+    np.savetxt('tables/table_Spval_' + n[5:] + '.csv', pval, delimiter=',')
+
+correl(setosa)
+correl(versicolor)
+correl(virginica)
