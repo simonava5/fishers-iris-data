@@ -78,7 +78,7 @@ print(data.dtypes)
   <b>Figure 3.</b> Output of .shape and .dtypes.<br>
 </p>
 
-The species column is currently listed as an object. For future exploration and analyses I want to specify that the species column represents a categorical variable. 
+The numerical features are correctly identified as continuous variables stored as a [double precision float](https://docs.scipy.org/doc/numpy-1.14.0/user/basics.types.html) and the species column as an object. For future exploration and analyses I want to specify that the species column represents a categorical variable. 
 
 ```python
 data['species'] = data['species'].astype('category')
