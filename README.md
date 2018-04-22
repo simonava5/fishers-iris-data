@@ -71,7 +71,19 @@ print(data.head())
 print("The data frame has (rows, columns):", (data.shape))
 print(data.dtypes)
 ```
-[image]
+<p align="center">
+  <img alt="Output of .shape and .dtypes" src="https://github.com/tomasmurray/fishers-iris-data/blob/master/figures/data_frame.PNG">
+</p>
+<p align="center">
+  <b>Figure 3.</b> Output of .shape and .dtypes.<br>
+</p>
+
+The species column is currently listed as an object. For future exploration and analyses I want to specify that the species column represents a categorical variable. 
+
+```python
+data['species'] = data['species'].astype('category')
+print(data.dtypes)
+```
 
 ### Data exploration
 
