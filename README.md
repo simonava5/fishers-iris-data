@@ -48,6 +48,30 @@ Given that it was one of the first widely available and high profile ‘real dat
 * Implement a classification approach, identify which features were the most informative and assess the accuracy of the approach
 
 ### Data acquistion and formatting
+The raw data file was downloaded from UC Irvine Machine Learning Repository [3]. For futher data exploration and manipulation the [pandas](https://pandas.pydata.org/) library was imported. The pandas library is an open-source, [BSD-licensed](http://www.linfo.org/bsdlicense.html) library of functions that greatly facilitate data exploration, manipulation and analysis [10]. It is dependent on other libraries such as [NumPy](http://www.numpy.org/) [11] for additional mathematical functions beyond the Python standard library and [matplotlib.pyplot](https://matplotlib.org/api/pyplot_api.html) [12] module to provide a MATLAB-like plotting framework, both of which must be imported in addition to pandas.
+
+```python
+import pandas as pd # abbreviate library to simplify code
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+The default data structure for pandas is a data frame rather than an array. The raw data were loaded as a data frame and the first five rows examined to check the file format.
+
+```python
+raw = pd.read_csv('data/iris.csv', sep=',')
+print(raw.head())
+```
+
+As the raw data frame lacks column headings, these were added added and the data frame renamed to data. The dimensions of the data frame were checked using the .shape() and the data types per column examined using .dtypes().
+
+```python
+data = pd.read_csv('data/iris.csv', sep=',', header = None, names = ['sepalLength', 'sepalWidth', 'petalLength', 'petalWidth', 'species'])
+print(data.head())
+print("The data frame has (rows, columns):", (data.shape))
+print(data.dtypes)
+```
+[image]
 
 ### Data exploration
 
@@ -73,5 +97,10 @@ Given that it was one of the first widely available and high profile ‘real dat
 8.	Runkler, T. A. (2012). Chapter 2: Data and Relations. Models and Algorithms for Intelligent Data Analysis. Vieweg and Teubner Verlag.
 9.	Wikipedia entry: Ronald Fisher
 	https://en.wikipedia.org/wiki/Ronald_Fisher
-
-
+10.	pandas library for Python
+	https://pandas.pydata.org/
+11.	NumPy library for Python
+	http://www.numpy.org/
+12.	pyplot module of the Matplotib library for Python
+	https://matplotlib.org/api/pyplot_api.html
+13.	
