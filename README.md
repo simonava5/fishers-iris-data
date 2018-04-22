@@ -96,14 +96,14 @@ table1.to_csv('tables/table1.csv')
 
 Statistic |	Sepal Length | Sepal Width | Petal Length | Petal Width
 --- | --- | --- | --- | ---
-count |	150 |	150 |	150 |	150
-mean |	5.843 |	3.054 |	3.758 |	1.198
-std	| 0.828 |	0.433 |	1.764 |	0.763
-min	| 4.3 |	2 |	1 |	0.1
-25%	| 5.1 |	2.8 |	1.6 |	0.3
-50%	| 5.8 |	3 |	4.35 |	1.3
-75%	| 6.4 |	3.3 |	5.1 |	1.8
-max	| 7.9 |	4.4 |	6.9 |	2.5
+Count |	150 |	150 |	150 |	150
+Mean |	5.843 |	3.054 |	3.758 |	1.198
+Standard deviaiton	| 0.828 |	0.433 |	1.764 |	0.763
+Minimum	| 4.3 |	2 |	1 |	0.1
+25% quartile	| 5.1 |	2.8 |	1.6 |	0.3
+Median | 5.8 |	3 |	4.35 |	1.3
+75% quartile	| 6.4 |	3.3 |	5.1 |	1.8
+Maximum	| 7.9 |	4.4 |	6.9 |	2.5
 
 
 
