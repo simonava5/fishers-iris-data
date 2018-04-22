@@ -94,7 +94,7 @@ print(table1)
 table1.to_csv('tables/table1.csv')
 ```
 
-Statistic |	Sepal Length | Sepal Width | Petal Length | Petal Width
+Statistic |	Sepal Length (cm) | Sepal Width (cm) | Petal Length (cm) | Petal Width (cm)
 --- | --- | --- | --- | ---
 Count |	150 |	150 |	150 |	150
 Mean |	5.843 |	3.054 |	3.758 |	1.198
@@ -114,7 +114,49 @@ print(table2)
 table2.to_csv('tables/table2.csv')
 ```
 
+Speal Length (cm) |	*I. setosa*	| *I. versicolor* |	*I. virginica*
+--- | --- | --- | ---
+Count |	50 |	50 |	50
+Mean |	5.006 |	5.936 |	6.588
+Standard deviation |	0.352 |	0.516 |	0.635
+Minimum	| 4.3 |	4.9 |	4.9
+25% quartile |	4.8 |	5.6 |	6.225
+Median |	5	| 5.9 |	6.5
+75%	quartile | 5.2 |	6.3 |	6.9
+Maximum |	5.8 |	7 |	7.9
 
+Sepal Width (cm) |	*I. setosa*	| *I. versicolor* |	*I. virginica*
+--- | --- | --- | ---
+Count |	50 |	50 |	50
+Mean	| 3.418 |	2.770 |	2.974
+Standard deviation |	0.381 |	0.313 |	0.322
+Minimum |	2.3 |	2 |	2.2
+25% quartile |	3.125 |	2.525 |	2.8
+Median |	3.4 |	2.8 |	3
+75% quartile |	3.675 |	3 |	3.175
+Maximum |	4.4 |	3.4 |	3.8
+
+Petal Length (cm) |	*I. setosa*	| *I. versicolor* |	*I. virginica*
+--- | --- | --- | ---
+Count |	50 |	50	| 50
+Mean	| 1.464 |	4.260 |	5.552
+Standard deviation |	0.173 |	0.469 |	0.551
+Minimum	| 1 |	3	| 4.5
+25% quartile |	1.4 |	4 |	5.1
+Median |	1.5 |	4.35 |	5.55
+75% quartile |	1.575 |	4.6 |	5.875
+Maximum |	1.9 |	5.1 |	6.9
+
+Petal Width (cm) |	*I. setosa*	| *I. versicolor* |	*I. virginica*
+--- | --- | --- | ---
+Count |	50 |	50 |	50
+Mean |	0.244 |	1.326 |	2.026
+Standard deviation |	0.107 |	0.197 | 0.274
+Minimum |	0.1 |	1 |	1.4
+25%	quartile | 0.2 |	1.2 |	1.8
+Median |	0.2 |	1.3 |	2
+75% quartile |	0.3 |	1.5 |	2.3
+Maximum |	0.6 |	1.8 |	2.5
 
 
 
