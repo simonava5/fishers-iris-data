@@ -36,7 +36,7 @@ print(data.dtypes)
 data['species'] = data['species'].astype('category')
 print(data.dtypes)
 
-# Print decriptive statistics about the numerical columns and save as a table in the 'tables' folder
+# Print decriptive statistics about the numerical columns and save as a table in the 'tables' directory
 
 table1 = data.describe()
 print(table1)
