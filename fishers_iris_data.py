@@ -31,6 +31,11 @@ print(data.head())
 print("The data frame has (rows, columns):", (data.shape))
 print(data.dtypes)
 
+# ensure species is being recogised as a categorical as it was originally called 'object' above: https://pandas.pydata.org/pandas-docs/stable/categorical.html 
+
+data['species'] = data['species'].astype('category')
+print(data.dtypes)
+
 # Print decriptive statistics about the numerical columns and save as a table in the 'tables' folder
 
 table1 = data.describe()
@@ -133,11 +138,6 @@ plt.savefig('figures/fig5.jpg')
 # Import scipy for Kruskal Wallis test functionality: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kruskal.html Test the null hypothesis that the distribution of the ranks of the numerical features do not differ across species.
 
 import scipy.stats as sc
-
-# ensure species is being recogised as a categorical as it was originally called 'object' above: https://pandas.pydata.org/pandas-docs/stable/categorical.html 
-
-data['species'] = data['species'].astype('category')
-print(data.dtypes)
 
 # Kruskal Wallis test requires an arrary from the dataframe: https://stackoverflow.com/questions/35276217/use-groups-in-scipy-stats-kruskal-similar-to-r-cran-kruskal-test
 
