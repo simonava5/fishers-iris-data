@@ -63,7 +63,7 @@ setosa = data[data['species'] == 'Iris-setosa']
 versicolor = data[data['species'] == 'Iris-versicolor']
 virginica = data[data['species'] == 'Iris-virginica']
 
-# I know this violates the 'Don't Repeat Yourself' principle, but with just four graphs to generate I didn't have time to write a function. 
+# I know this violates the 'Don't Repeat Yourself' principle, but with four graphs each with different axes and titles to generate I didn't have time to write a function. 
 
 # Fig.1 Histogram of sepal length across species. Based on: https://stackoverflow.com/questions/21548750/plotting-histograms-against-classes-in-pandas-matplotlib/21549391  
 
