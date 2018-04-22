@@ -86,7 +86,7 @@ print(data.dtypes)
 ```
 
 ### Data exploration
-The pandas [.describe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.describe.html) module generates descriptive statistics for the numerical features of our data frame. This output is then saved as a .csv in the /tables directory.
+The pandas [.describe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.describe.html) module generates descriptive statistics for the numerical features of the data frame. This output is then saved as a .csv in the /tables directory.
 
 ```python
 table1 = data.describe()
@@ -104,6 +104,16 @@ Minimum	| 4.3 |	2 |	1 |	0.1
 Median | 5.8 |	3 |	4.35 |	1.3
 75% quartile	| 6.4 |	3.3 |	5.1 |	1.8
 Maximum	| 7.9 |	4.4 |	6.9 |	2.5
+
+To examine the differences across species, the same summary statistics were generated per species using the .groupby module on the categorical species variable.
+
+```python
+byspecies = data.groupby('species')
+table2 = byspecies.describe()
+print(table2)
+table2.to_csv('tables/table2.csv')
+```
+
 
 
 

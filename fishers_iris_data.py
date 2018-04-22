@@ -42,7 +42,7 @@ table1 = data.describe()
 print(table1)
 table1.to_csv('tables/table1.csv')
 
-# Split data into groups by speices, print decriptive statistics and save as a table
+# Split data into groups by species, print decriptive statistics and save as a table
 
 byspecies = data.groupby('species')
 table2 = byspecies.describe()
