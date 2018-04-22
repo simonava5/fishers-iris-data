@@ -2,14 +2,7 @@
 # Course 52167 Programming and Scripting
 # Fisher's Iris Data Project
 
-# Raw data from https://archive.ics.uci.edu/ml/datasets/iris
-
-# Check raw data frame structure as originally taught for this data file
-
-with open("data/iris.csv") as f:
-  for line in f:    
-    x = line.split(',')     
-    print(('{} {} {} {} {}').format(x[0], x[1], x[2], x[3], x[4]))
+# Raw data file downloaded from https://archive.ics.uci.edu/ml/datasets/iris
 
 # For futher data exploration and manipulation import the pandas library https://pandas.pydata.org/. It is dependent on other libraries such as NumPy http://www.numpy.org/ for additional mathematical functions beyond the Python standard library and matplotlib.pyplot https://matplotlib.org/api/pyplot_api.html to provide a MATLAB-like plotting framework.
 
