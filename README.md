@@ -78,7 +78,7 @@ print(data.dtypes)
   <b>Figure 3.</b> Output of .shape and .dtypes.<br>
 </p>
 
-The numerical features are correctly identified as continuous variables stored as a [double precision float](https://docs.scipy.org/doc/numpy-1.14.0/user/basics.types.html) and the species column as an object. For future exploration and analyses I want to specify that the species column represents a categorical variable. 
+The numerical features are correctly identified as continuous variables stored as a [double precision float](https://docs.scipy.org/doc/numpy-1.14.0/user/basics.types.html) and the species column as an object. For future exploration and analyses I then specify that the species column represents a categorical variable using the .astype module. 
 
 ```python
 data['species'] = data['species'].astype('category')
@@ -158,7 +158,9 @@ Median |	0.2 |	1.3 |	2
 75% quartile |	0.3 |	1.5 |	2.3
 Maximum |	0.6 |	1.8 |	2.5
 
+Histograms illustrate the shape of the distribution of each feature per species. This aids the identification of the differences, or lack thereof, between species per feature. When exploring differences between classes, I think unstacked histograms per class plotted with the entire distribution in the background more ameniable to interpretation than stacked histograms.
 
+Initially, I tried to plot a histogram using the pandas .groupby function but this did not produce the expected panel of histograms (identical issue reproted [here](https://stackoverflow.com/questions/45883598/pandas-histogram-df-hist-group-by) on stackoverflow). 
 
 ### Analyses
 #### Comparison across classes
